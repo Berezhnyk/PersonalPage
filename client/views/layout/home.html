@@ -1,0 +1,41 @@
+<template name="stream">
+  {{#each posts}}
+    {{> post}}
+  {{/each}}
+</template>
+
+<template name="menu">
+  <pre><a href="{{pathFor 'home'}}"><h2 class="metro green"><i>Головна</i></h2></a> <a href="{{pathFor 'about'}}"><h2 class="metro green"><i>Про мене</i></h2></a></pre>
+</template>
+
+<template name="editor">
+  <h1>Новий коментар</h1>
+  <label>
+    <textarea type="text" id="editor-area" placeholder="Введіть ваш коментар тут..."></textarea>
+  </label>
+
+<label id="submit-post" class="metro">Опублікувати</label>
+
+</template>
+
+<template name="post">
+  <div class="panel">
+    <h2>{{title}}</h2>
+    <p>{{{text}}}</p>
+    <span class="remove">Вилучити</span>
+    {{published}}
+  </div>
+</template>
+
+<template name="HomePage">
+   <div class="container"> 
+  <div class="header">
+    {{> menu}}
+  </div>
+    <div class="posts">   
+      {{> editor}}
+      {{> stream}}
+    </div>
+  </div>
+</template>
+

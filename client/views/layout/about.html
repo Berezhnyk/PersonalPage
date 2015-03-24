@@ -1,0 +1,26 @@
+<template name="about">
+  <div class="container"> 
+  <div class="header">
+    {{> menu}}
+  </div>
+
+    <div class="posts">   
+      {{#each about}}
+        {{> berezhnyk}}
+      {{/each}}
+    </div>
+  </div>
+  
+</template>
+
+<template name="berezhnyk">
+  <div class="panel">
+    <p>Hello, World!</p>
+    <p>Мене звуть <i>{{myname}}</i>. Прізвище моє <i>{{subname}}</i>.</p>
+    <p>Вік: {{age}}</p>
+    <p>Дата народження: {{birthday}}</p>
+    <p>Університет: {{university}}</p>
+    <p>Факультет: {{faculty}}</p>
+    <p>Кафедра: {{cathedra}}</p>
+  </div>
+</template>
